@@ -15,8 +15,24 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
         
-            <button type="submit">Submit</button>
+            <button type="submit">Submit</button> 
         </form>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/rahul-jaiswal-66491122a/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRnZFHkDLxQRgwdqTSJxXrlKhxLjTHStdhwdQVZZJflQJxLHXHkkhDRhQfRLzLnFnWQWzZL" target="_blank">
+            <i class="far fa-envelope"></i>
+          </a>
+            <a href="https://www.github.com/Thehackernonymous" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rahul-jaiswal-66491122a/" target="_blank" rel="noopener noreferrer">
+    <i class="fab" :class="{ 'fa-linkedin': true }"></i>
+  </a>
+          </div>   
+       
+
         
     </div>
     <section class="footer">
@@ -64,30 +80,62 @@ export default {
   components: {
     HeaderPage,
   },
+  data() {
+    return {
+      formData: {
+        name: '',
+        email: '',
+        message: '',
+      },
+    };
+  },
   methods: {
-    async submit() {
-  try {
-    const response = await this.$axios.post('https://localhost:8000/sendEmail.php', {
-      name: this.name,
-      email: this.email,
-      message: this.message,
-    });
+//     async submit() {
+//   try {
+//     const response = await this.$axios.post('https://localhost:8000/sendEmail.php', {
+//       name: this.name,
+//       email: this.email,
+//       message: this.message,
+//     });
 
-    if (response.data && response.data.success) {
-          // Clear form fields or show success message
-          this.name = '';
-          this.email = '';
-          this.message = '';
-          console.log('Email sent successfully');
+//     if (response.data && response.data.success) {
+//         
+//           this.name = '';
+//           this.email = '';
+//           this.message = '';
+//           console.log('Email sent successfully');
+//         } else {
+//           console.error('Error sending email:', response.data.message || 'Unknown error');
+//           // Handle error, show error message, etc.
+//         }
+//       } catch (error) {
+//         console.error('Error sending email:', error);
+//         // Handle error, show error message, etc.
+//       }
+// },
+//   },
+async submitForm() {
+      try {
+        const response = await fetch('http://localhost:3000/submit-form', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(this.formData),
+        });
+
+        if (response.ok) {
+          console.log('Form submitted successfully');
+          // Optionally reset form data or show a success message
         } else {
-          console.error('Error sending email:', response.data.message || 'Unknown error');
+          console.error('Form submission failed');
           // Handle error, show error message, etc.
         }
       } catch (error) {
-        console.error('Error sending email:', error);
+        console.error('Error submitting form:', error);
         // Handle error, show error message, etc.
       }
-},
+    },
   },
 };
 </script>

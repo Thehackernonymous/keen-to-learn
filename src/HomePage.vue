@@ -71,6 +71,16 @@ export default {
         this.$router.push({ name: 'CssPage' });
       } else if (searchInput === 'html') {
         this.$router.push({ name: 'HtmlPage' });
+      } else if (searchInput === 'JavaScript') {
+        this.$router.push({ name: 'JsPage' });
+      } else if (searchInput === 'MySql') {
+        this.$router.push({ name: 'MySql' });
+      } else if (searchInput === 'PostgreSql') {
+        this.$router.push({ name: 'Postgres' });
+      } else if (searchInput === 'MongoDB') {
+        this.$router.push({ name: 'MongoDB' });
+      } else if (searchInput === 'NodeJs') {
+        this.$router.push({ name: 'NodePage' });
       } else {
         alert('No results found');
       }

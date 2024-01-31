@@ -3,7 +3,7 @@
     <HeaderPage />
 </div>
     <div class="page-header">
-      <h1>Docker</h1>
+      <h1>MySql</h1>
       <div class="section-navigation">
       <button class="b1" @click="showSection('videos')">Videos</button>
       <button class="b1" @click="showSection('links')">Links</button>
@@ -29,12 +29,12 @@
     <div class="section1" id="links" v-show="showLinks">
       <h2>Links</h2>
       <ol>
-        <li><a href="https://en.wikipedia.org/wiki/Docker_(software)" target="_blank">Wikipedia</a></li>
-        <li><a href="https://www.docker.com/" target="_blank">Docker</a></li>
-        <li><a href="https://opensource.com/resources/what-docker" target="_blank">OpenSource</a></li>
-        <li><a href="https://aws.amazon.com/docker/" target="_blank">AWS</a></li>
-        <li><a href="https://www.ibm.com/topics/docker" target="_blank">IBM</a></li>
-        <li><a href="https://www.techtarget.com/searchitoperations/definition/Docker" target="_blank">Tech Target</a></li>
+        <li><a href="https://www.w3schools.com/MySQL/default.asp" target="_blank">w3schools</a></li>
+        <li><a href="https://www.oracle.com/mysql/what-is-mysql/" target="_blank">Oracle</a></li>
+        <li><a href="https://www.javatpoint.com/mysql-tutorial" target="_blank">Javatpoint</a></li>
+        <li><a href="https://hub.docker.com/_/mysql" target="_blank">Docker Hub</a></li>
+        <li><a href="https://www.tutorialspoint.com/mysql/index.htm" target="_blank">TutorialPoint</a></li>
+        <li><a href="https://www.techtarget.com/searchoracle/definition/MySQL" target="_blank">Tech Target</a></li>
       </ol>
     </div>
     <section class="footer">
@@ -42,8 +42,8 @@
           <div class="footer-col">
             <h4>Info</h4>
             <ul class="links">
-              <li><a href="/docs/contact.html">Contact Us</a></li>
-              <li><a href="/docs/about.html">About</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
           </div>
     
@@ -85,17 +85,17 @@
       return {
       
         videos: [
-          { src: "https://www.youtube.com/embed/31k6AtW-b3Y?si=wurSJhdlmYgmG-bn" },
-          { src: "https://www.youtube.com/embed/WNUCAPKa44Y?si=JLbe8j_v0GFCLs2A" },
-          { src: "https://www.youtube.com/embed/pTFZFxd4hOI?si=wBI44mbmZ5LWM7gL" },
-          { src: "https://www.youtube.com/embed/pg19Z8LL06w?si=3nVPPO1-wm_ffs0L" },
-          { src: "https://www.youtube.com/embed/OhnTMWmfTBE?si=vqPRITIDeqIgWDld" },
-          { src: "https://www.youtube.com/embed/3c-iBn73dDE?si=WTIzzcKDg9iVuCeq" },
-          { src: "https://www.youtube.com/embed/RqTEHSBrYFw?si=QkydBzGPt9MNb0u5" },
-          { src: "https://www.youtube.com/embed/zJ6WbK9zFpI?si=NN2PY7pzTqtOzz1n" },
-          { src: "https://www.youtube.com/embed/fqMOX6JJhGo?si=mfNbIfsdfSK_KbYv" },
-          { src: "https://www.youtube.com/embed/X3Wtjwu0vBI?si=-0fIelFCQON8cSpi" },
-          { src: "https://www.youtube.com/embed/0SS6bJczlgs?si=UsLn00CcOgyJ7HJ2" },
+          { src: "https://www.youtube.com/embed/hlGoQC332VM?si=91Pr95yvxz5ee6ZX" },
+          { src: "https://www.youtube.com/embed/7S_tz1z_5bA?si=rw77vb8XtAWuYooA" },
+          { src: "https://www.youtube.com/embed/KKgN_w71x3E?si=hI_yF-xZwnEIKVU9" },
+          { src: "https://www.youtube.com/embed/Hy3qbMAoEJk?si=Cb20wXw-kZ-gXL1G" },
+          { src: "https://www.youtube.com/embed/en6YPAgc6WM?si=bhjXeL1qthO92SSY" },
+          { src: "https://www.youtube.com/embed/Tdl7CGnhPeA?si=sQF_JeiKTHeoN6rX" },
+          { src: "https://www.youtube.com/embed/Cz3WcZLRaWc?si=irCxtq_lJQuc_xBW" },
+          { src: "https://www.youtube.com/embed/5OdVJbNCSso?si=pti5-jR_Dz_kVi6k" },
+          { src: "https://www.youtube.com/embed/HXV3zeQKqGY?si=6i51hWvHM-qnMhi8" },
+          { src: "https://www.youtube.com/embed/D_wNQR3LeeM?si=wHJPehxO8W6j3f-1" },
+          { src: "https://www.youtube.com/embed/wALCw0F8e9M?si=qP82RfVxg_5Ky_6y" },
         ],
         showVideos: ref(true),
       showLinks: ref(false),

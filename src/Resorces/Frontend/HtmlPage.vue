@@ -1,8 +1,7 @@
 <template>
     <HeaderPage />
-
     <div class="page-header">
-      <h1>CSS</h1>
+      <h1>HTML</h1>
       <div class="section-navigation">
         <button @click="showSection('videos')">Videos</button>
         <button @click="showSection('links')">Links</button>
@@ -28,22 +27,22 @@
     <div class="section1" id="links" v-show="showLinks">
       <h2>Links</h2>
       <ol>
-          <li><a href="https://en.wikipedia.org/wiki/CSS" target="_blank">wikipedia</a></li>
-          <li><a href="https://www.w3schools.com/css/" target="_blank">w3schools</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">mozilla docs</a></li>
-          <li><a href="https://web.dev/learn/css" target="_blank">Web.dev</a></li>
-          <li><a href="https://www.tutorialspoint.com/css/index.htm" target="_blank">tutorialspoint</a></li>
-          <li><a href="https://www.codecademy.com/learn/learn-css" target="_blank">codecademy</a></li>
-          <li><a href="https://www.geeksforgeeks.org/css-tutorial/" target="_blank">geeksforgeeks</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/HTML" target="_blank">Wikipedia</a></li>
+          <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla</a></li>
+          <li><a href="https://html.com/" target="_blank">HTML</a></li>
+          <li><a href="https://www.geeksforgeeks.org/html-tutorial/" target="_blank">geeksforgeeks</a></li>
+          <li><a href="https://www.tutorialspoint.com/html/index.htm" target="_blank">Tutorial Point</a></li>
         </ol>
       </div>
+    
       <section class="footer">
         <div class="footer-row">
           <div class="footer-col">
             <h4>Info</h4>
             <ul class="links">
-              <li><a href="/docs/contact.html">Contact Us</a></li>
-              <li><a href="/docs/about.html">About</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
           </div>
     
@@ -72,30 +71,26 @@
   </template>
   
   <script>
-  import HeaderPage from '@/components/Header/HeaderPage.vue';
-  import { ref } from 'vue';
+import HeaderPage from '@/components/Header/HeaderPage.vue';
+import { ref } from 'vue';
 
 export default{
-  name: 'CssPage',
+  name: 'HtmlPage',
 
     components: {
         HeaderPage,
     },
-
-
     data() {
       return {
         videos: [
-          { src: "https://www.youtube.com/embed/ESnrn1kAD4E?si=WPgOWqLMUmMhJ5Yf" },
-          { src: "https://www.youtube.com/embed/Edsxf_NBFrw?si=2Z0JzBmFOGN89Jjz" },
-          { src: "https://www.youtube.com/embed/OXGznpKZ_sA?si=eCL_Dk2KfONLIYIk" },
-          { src: "https://www.youtube.com/embed/EUtlj7xdO1o?si=g9W1hIxjvrTZaAHW" },
-          { src: "https://www.youtube.com/embed/wRNinF7YQqQ?si=pIpG22GWmMz70zSR" },
-          { src: "https://www.youtube.com/embed/K1naz9wBwKU?si=9fnKrJARitGPUQLc" },
-          { src: "https://www.youtube.com/embed/oMXdbUN6h-Q?si=Ri70f7nTPmCMmslt" },
-          { src: "https://www.youtube.com/embed/WyxzAU3p8CE?si=QkEb3qVLjMD9ZSR6" },
-          { src: "https://www.youtube.com/embed/ywBg3YV2PJU?si=0lGMqCdlNPiMEEuK" },
-          { src: "https://www.youtube.com/embed/OpWjt_wbV4E?si=wjwMiv3qg5S4UQ5b" },
+          { src: "https://www.youtube.com/embed/HcOc7P5BMi4?si=csF39_sPcfa9o6FZ" },
+          { src: "https://www.youtube.com/embed/qz0aGYrrlhU?si=lEoiF_cKmelxMA1V" },
+          { src: "https://www.youtube.com/embed/BsDoLVMnmZs?si=f9DvS9M2tyz9EOaG" },
+          { src: "https://www.youtube.com/embed/iG2jotQo9NI?si=RPJ_EzqHCIkgAtbx" },
+          { src: "https://www.youtube.com/embed/k7ELO356Npo?si=0PTTiLmXhDtWOEdG" },
+          { src: "https://www.youtube.com/embed/5ccq_nLHneE?si=Bu0jYwTd6FuqB4iG" },
+          { src: "https://www.youtube.com/embed/rklidcZ-aLU?si=227w1b_G1XGegH7g" },
+          { src: "https://www.youtube.com/embed/byTOONVJn-k?si=4RMCRkUbDcsnJAz8" },
         ],
         showVideos: ref(true),
       showLinks: ref(false),
@@ -126,6 +121,7 @@ ol li a {
 .header {
     position: sticky;
 }
+  
   .page-header {
     text-align: center;
   }
@@ -158,7 +154,7 @@ ol li a {
     text-align: center;
   }
   
-   
+  
   @media only screen and (min-width: 600px) {
     #videos,
     #links {
@@ -212,6 +208,7 @@ ol li a {
   .size {
     height: 100vh;
   }
+
   .footer {
     display: flex;
     justify-content: center;
@@ -281,5 +278,6 @@ ol li a {
   .icons i:hover {
     color: #007BFF;
   }
-    </style>
+  
+  </style>
   

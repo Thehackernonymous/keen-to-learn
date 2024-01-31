@@ -1,14 +1,15 @@
 <template>
+    <div class="header">
     <HeaderPage />
+</div>
     <div class="page-header">
-      <h1>Podman</h1>
+      <h1>Docker</h1>
       <div class="section-navigation">
-        <button class="b1" @click="showSection('videos')">Videos</button>
+      <button class="b1" @click="showSection('videos')">Videos</button>
       <button class="b1" @click="showSection('links')">Links</button>
-      </div>
     </div>
-  
-    <div class="section" id="videos" v-show="showVideos">
+  </div>
+  <div class="section" id="videos" v-show="showVideos">
       <h2>Videos</h2>
       <div class="video-container">
         <iframe
@@ -24,24 +25,25 @@
       </div>
     </div>
   
+   
     <div class="section1" id="links" v-show="showLinks">
       <h2>Links</h2>
       <ol>
-          <li><a href="https://podman.io/" target="_blank">Podman</a></li>
-          <li><a href="https://opensource.com/article/18/10/podman-more-secure-way-run-containers" target="_blank">OpenSource</a></li>
-          <li><a href="https://www.redhat.com/en/topics/containers/what-is-podman" target="_blank">Red Hat</a></li>
-          <li><a href="https://www.infoworld.com/article/3663672/what-is-podman-and-will-it-replace-docker.html" target="_blank">Infoworld</a></li>
-          <li><a href="https://minikube.sigs.k8s.io/docs/drivers/podman/" target="_blank">Minikube</a></li>
-        </ol>
-      </div>
-    
-      <section class="footer">
+        <li><a href="https://en.wikipedia.org/wiki/Docker_(software)" target="_blank">Wikipedia</a></li>
+        <li><a href="https://www.docker.com/" target="_blank">Docker</a></li>
+        <li><a href="https://opensource.com/resources/what-docker" target="_blank">OpenSource</a></li>
+        <li><a href="https://aws.amazon.com/docker/" target="_blank">AWS</a></li>
+        <li><a href="https://www.ibm.com/topics/docker" target="_blank">IBM</a></li>
+        <li><a href="https://www.techtarget.com/searchitoperations/definition/Docker" target="_blank">Tech Target</a></li>
+      </ol>
+    </div>
+    <section class="footer">
         <div class="footer-row">
           <div class="footer-col">
             <h4>Info</h4>
             <ul class="links">
-              <li><a href="/docs/contact.html">Contact Us</a></li>
-              <li><a href="/docs/about.html">About</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
           </div>
     
@@ -73,19 +75,27 @@
   import HeaderPage from '@/components/Header/HeaderPage.vue';
   import { ref } from 'vue';
 
-export default{
-  name: 'PodmanPage',
-
-    components: {
-        HeaderPage,
-    },
+  export default{
+    name: 'DockerPage',
+  
+      components: {
+          HeaderPage,
+      },
     data() {
       return {
+      
         videos: [
-          { src: "https://www.youtube.com/embed/AB04TJvmTO0?si=RrhfZlJ7l8JxJbYD" },
-          { src: "https://www.youtube.com/embed/VdbjFgqPPE8?si=2b6oIhoSahIog6A7" },
-          { src: "https://www.youtube.com/embed/5WML8gX2F1c?si=_zWwivETJUrTWmv6" },
-          { src: "https://www.youtube.com/embed/0tuoXBuuuws?si=lFQT70QhndcePGXQ" },
+          { src: "https://www.youtube.com/embed/31k6AtW-b3Y?si=wurSJhdlmYgmG-bn" },
+          { src: "https://www.youtube.com/embed/WNUCAPKa44Y?si=JLbe8j_v0GFCLs2A" },
+          { src: "https://www.youtube.com/embed/pTFZFxd4hOI?si=wBI44mbmZ5LWM7gL" },
+          { src: "https://www.youtube.com/embed/pg19Z8LL06w?si=3nVPPO1-wm_ffs0L" },
+          { src: "https://www.youtube.com/embed/OhnTMWmfTBE?si=vqPRITIDeqIgWDld" },
+          { src: "https://www.youtube.com/embed/3c-iBn73dDE?si=WTIzzcKDg9iVuCeq" },
+          { src: "https://www.youtube.com/embed/RqTEHSBrYFw?si=QkydBzGPt9MNb0u5" },
+          { src: "https://www.youtube.com/embed/zJ6WbK9zFpI?si=NN2PY7pzTqtOzz1n" },
+          { src: "https://www.youtube.com/embed/fqMOX6JJhGo?si=mfNbIfsdfSK_KbYv" },
+          { src: "https://www.youtube.com/embed/X3Wtjwu0vBI?si=-0fIelFCQON8cSpi" },
+          { src: "https://www.youtube.com/embed/0SS6bJczlgs?si=UsLn00CcOgyJ7HJ2" },
         ],
         showVideos: ref(true),
       showLinks: ref(false),
@@ -104,8 +114,10 @@ export default{
   </script>
   
   <style scoped>
- 
- .section1{
+
+  
+
+  .section1{
     height: 80vh;
   }
 
@@ -117,6 +129,12 @@ ol li a {
 .header {
     position: sticky;
 }
+
+  /* body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  } */
+  
   .page-header {
     text-align: center;
   }
@@ -148,6 +166,7 @@ ol li a {
     /* margin-bottom: 10px; */
     text-align: center;
   }
+  
   
   
   @media only screen and (min-width: 600px) {
@@ -199,7 +218,7 @@ ol li a {
   /* border-bottom-width: 50px; */
 
 }
-  
+
   .size {
     height: 100vh;
   }

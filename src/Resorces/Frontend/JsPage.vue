@@ -1,14 +1,15 @@
 <template>
+    <div class="header">
     <HeaderPage />
+</div>
     <div class="page-header">
-      <h1>HTML</h1>
+      <h1>JavaScript</h1>
       <div class="section-navigation">
-        <button @click="showSection('videos')">Videos</button>
-        <button @click="showSection('links')">Links</button>
-      </div>
+      <button class="b1" @click="showSection('videos')">Videos</button>
+      <button class="b1" @click="showSection('links')">Links</button>
     </div>
-  
-    <div class="section" id="videos" v-show="showVideos">
+  </div>
+  <div class="section" id="videos" v-show="showVideos">
       <h2>Videos</h2>
       <div class="video-container">
         <iframe
@@ -24,25 +25,27 @@
       </div>
     </div>
   
+   
     <div class="section1" id="links" v-show="showLinks">
       <h2>Links</h2>
       <ol>
-          <li><a href="https://en.wikipedia.org/wiki/HTML" target="_blank">Wikipedia</a></li>
-          <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla</a></li>
-          <li><a href="https://html.com/" target="_blank">HTML</a></li>
-          <li><a href="https://www.geeksforgeeks.org/html-tutorial/" target="_blank">geeksforgeeks</a></li>
-          <li><a href="https://www.tutorialspoint.com/html/index.htm" target="_blank">Tutorial Point</a></li>
-        </ol>
-      </div>
-    
-      <section class="footer">
+        <li><a href="https://www.w3schools.com/js/" target="_blank">Wikipedia</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Docker</a></li>
+        <li><a href="https://www.javascript.com/" target="_blank">OpenSource</a></li>
+        <li><a href="https://www.geeksforgeeks.org/javascript/" target="_blank">AWS</a></li>
+        <li><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">IBM</a></li>
+        <li><a href="https://www.tutorialspoint.com/javascript/index.htm" target="_blank">Tech Target</a></li>
+        <li><a href="https://www.javatpoint.com/javascript-tutorial" target="_blank">OpenSource</a></li>
+        <li><a href="https://careerfoundry.com/en/tutorials/web-development-for-beginners/an-introduction-to-javascript/" target="_blank">OpenSource</a></li>
+      </ol>
+    </div>
+    <section class="footer">
         <div class="footer-row">
           <div class="footer-col">
             <h4>Info</h4>
             <ul class="links">
-              <li><a href="/docs/contact.html">Contact Us</a></li>
-              <li><a href="/docs/about.html">About</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
           </div>
     
@@ -71,26 +74,28 @@
   </template>
   
   <script>
-import HeaderPage from '@/components/Header/HeaderPage.vue';
-import { ref } from 'vue';
+  import HeaderPage from '@/components/Header/HeaderPage.vue';
+  import { ref } from 'vue';
 
-export default{
-  name: 'HtmlPage',
-
-    components: {
-        HeaderPage,
-    },
+  export default{
+    name: 'DockerPage',
+  
+      components: {
+          HeaderPage,
+      },
     data() {
       return {
+      
         videos: [
-          { src: "https://www.youtube.com/embed/HcOc7P5BMi4?si=csF39_sPcfa9o6FZ" },
-          { src: "https://www.youtube.com/embed/qz0aGYrrlhU?si=lEoiF_cKmelxMA1V" },
-          { src: "https://www.youtube.com/embed/BsDoLVMnmZs?si=f9DvS9M2tyz9EOaG" },
-          { src: "https://www.youtube.com/embed/iG2jotQo9NI?si=RPJ_EzqHCIkgAtbx" },
-          { src: "https://www.youtube.com/embed/k7ELO356Npo?si=0PTTiLmXhDtWOEdG" },
-          { src: "https://www.youtube.com/embed/5ccq_nLHneE?si=Bu0jYwTd6FuqB4iG" },
-          { src: "https://www.youtube.com/embed/rklidcZ-aLU?si=227w1b_G1XGegH7g" },
-          { src: "https://www.youtube.com/embed/byTOONVJn-k?si=4RMCRkUbDcsnJAz8" },
+          { src: "https://www.youtube.com/embed/W6NZfCO5SIk?si=gKm7YKU_COqImhjV" },
+          { src: "https://www.youtube.com/embed/E3XxeE7NF30?si=o38O6xjvO0YXa-pj" },
+          { src: "https://www.youtube.com/embed/hKB-YGF14SY?si=ywx4AYPjNwxujvvL" },
+          { src: "https://www.youtube.com/embed/PkZNo7MFNFg?si=GD6MSp0pUdOhR17k" },
+          { src: "https://www.youtube.com/embed/lfmg-EJ8gm4?si=i7bt2lll0hV57eiy" },
+          { src: "https://www.youtube.com/embed/htznIeWKgg8?si=P38yFNpmcfXy1QKY" },
+          { src: "https://www.youtube.com/embed/VlPiVmYuoqw?si=bTcsk1yHl5cV5YFk" },
+          { src: "https://www.youtube.com/embed/sscX432bMZo?si=FtINXxAWg8A80edm" },
+          { src: "https://www.youtube.com/embed/lkIFF4maKMU?si=fAYEhf5HWjmkBvo4" },
         ],
         showVideos: ref(true),
       showLinks: ref(false),
@@ -109,7 +114,10 @@ export default{
   </script>
   
   <style scoped>
-   .section1{
+
+  
+
+  .section1{
     height: 80vh;
   }
 
@@ -121,6 +129,11 @@ ol li a {
 .header {
     position: sticky;
 }
+
+  /* body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  } */
   
   .page-header {
     text-align: center;
@@ -153,6 +166,7 @@ ol li a {
     /* margin-bottom: 10px; */
     text-align: center;
   }
+  
   
   
   @media only screen and (min-width: 600px) {
@@ -204,11 +218,10 @@ ol li a {
   /* border-bottom-width: 50px; */
 
 }
-  
+
   .size {
     height: 100vh;
   }
-
   .footer {
     display: flex;
     justify-content: center;
