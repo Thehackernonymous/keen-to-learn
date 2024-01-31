@@ -1,19 +1,53 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomePage from '@/HomePage.vue';
+import AboutPage from '@/Pages/AboutPage.vue';
+import ContactPage from '@/Pages/ContactPage.vue';
+import CssPage from '@/Resorces/CssPage.vue';
+import HtmlPage from '@/Resorces/HtmlPage.vue';
+import DockerPage from '@/Resorces/DockerPage.vue';
+import PodmanPage from '@/Resorces/PodmanPage.vue';
+import ResourcePage from '@/Pages/ResourcePage.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'HomePage',
+    component: HomePage
   },
   {
     path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    name: 'AboutPage',
+    component: AboutPage
+  },
+  {
+    path: '/contact-us',
+    name: 'ContactPage',
+    component: ContactPage
+  },
+  {
+    path: '/CSS',
+    name: 'CssPage',
+    component: CssPage
+  },
+  {
+    path: '/HTML',
+    name: 'HtmlPage',
+    component: HtmlPage
+  },
+  {
+    path: '/Docker',
+    name: 'DockerPage',
+    component: DockerPage
+  },
+  {
+    path: '/Podman',
+    name: 'PodmanPage',
+    component: PodmanPage
+  },
+  {
+    path: '/resources',
+    name: 'ResourcePage',
+    component: ResourcePage
   }
 ]
 
@@ -22,4 +56,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;
