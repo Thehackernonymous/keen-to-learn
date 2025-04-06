@@ -11,7 +11,7 @@
             <h4>Info</h4>
             <ul class="links">
                 <li><a href="/contact-us">Contact Us</a></li>
-              <li><a href="/about">About</a></li>
+              <li><a href="/about">About Us</a></li>
             </ul>
           </div>
     
